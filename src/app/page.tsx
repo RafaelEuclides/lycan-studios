@@ -83,7 +83,7 @@ export default function Home() {
                     '/images/kratos3.jpg',
                     '/images/kratos4.jpg',
                   ]}
-                  interval={3000}
+                  interval={2500}
                   className="w-60 h-90 object-cover rounded-lg shadow-lg"
                 />
               </div>
