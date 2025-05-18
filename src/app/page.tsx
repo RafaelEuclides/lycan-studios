@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { Facebook, Instagram, Menu, X } from 'lucide-react';
+import { Facebook, Instagram, MessageCircleMore, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import FadeInSection from "@/components/FadeInSection";
 import HoverFadeAll from '@/components/HoverFadeAllImages';
@@ -140,27 +140,22 @@ export default function Home() {
           </FadeInSection>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-4 mt-8">
           {[
             'logo-yellow-eyes.png',
             'icon.png',
-            'logo-white-eyes.png',
-            'logo.png',
-            'logo.svg',
-            'logo-red-eyes.png',
           ].map((img, i) => (
             <img key={i} src={`/images/${img}`} alt={`Logo ${i}`} className="hover:scale-110 transition-transform" />
           ))}
         </div>
-      </section>
-
+      </section>   
       <footer id="contact">
         <div className="bg-black/40 backdrop-blur-sm p-6">
           <div className="flex justify-center flex-col items-center gap-2">
             <img
               src="/images/logo.png"
               alt="Lycan Studios Logo"
-              className="h-16 w-16 sm:h-20 sm:w-20 hover:scale-150 transition-transform"
+              className="h-16 w-16 sm:h-20 sm:w-20 hover:scale-120 transition-transform"
               style={{
                 filter: "drop-shadow(0 0 5px rgba(255, 0, 0, 0.5))",
               }}
@@ -168,13 +163,31 @@ export default function Home() {
             <p className="text-gray-300 text-sm">© 2025 Lycan Studios.</p>
           </div>
         </div>
-        <div className="flex justify-center py-8 gap-4">
-          <a className="hover:text-red-800" href="https://www.instagram.com/lycan.studio/" target="_blank" rel="noopener noreferrer">
-            <Instagram />
-          </a>
-          <a className="hover:text-red-800" href="https://www.facebook.com/lycanstudios" target="_blank" rel="noopener noreferrer">
-            <Facebook />
-          </a>
+        <div className="flex justify-center gap-4 pb-12">
+          <div className="relative group flex justify-center">
+            <a className="hover:text-red-800" href="https://www.instagram.com/lycan.studio/" target="_blank" rel="noopener noreferrer">
+              <Instagram />
+              <span className="absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded">
+                Instagram
+              </span>
+            </a>
+          </div>
+          <div className="relative group flex justify-center">
+            <a href="https://wa.me/559293774712" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+              <Facebook />
+              <span className="absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded">
+                Facebook
+              </span>
+            </a>
+          </div>
+          <div className="relative group flex justify-center">
+            <a href="https://wa.me/559293774712" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
+              <MessageCircleMore />
+              <span className="absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded">
+                Telefone/WhatsApp
+              </span>
+            </a>
+          </div>
         </div>
       </footer>
     </main>
